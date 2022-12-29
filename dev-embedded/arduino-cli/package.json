@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "run": "^1.4.0",
+    "taskfile": "^0.10.0"
+  }
+}
