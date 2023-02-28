@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>jerm.theory@gmail.com</email>
-		<description>Primary maintainer</description>
+		<email>jerm.theory@outlook.com</email>
+		<name>J Anthony</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">arduino/arduino-cli</remote-id>
+		<remote-id type="github">go-task/task</remote-id>
 	</upstream>
 </pkgmetadata>
