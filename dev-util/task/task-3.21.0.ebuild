@@ -14,15 +14,22 @@ SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="strip"
 
-SRC_URI="https://github.com/go-task/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${PV}.tar.gz
-		task-3.19.0-godeps.tar.xz"
+GH_DISTFILES="https://github.com/jersa/gentoo-ebuilds/blob/main/distfiles/"
 
-IUSE="fish-completion zsh-completion"
+if [[ ${PV} == 9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/go-task/${PN^}.git"
+else
+	SRC_URI="https://github.com/go-task/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${PV}.tar.gz
+			${GH_DISTFILES}${P}-deps.tar.xz"
+	KEWORDS="~amd64"
+fi
+
+IUSE=""
 #https://github.com/go-task/task/archive/refs/tags/v3.19.0.tar.gz
 
 BDEPEND="
 	>=dev-lang/go-1.17.0
-	dev-util/task
 "
 DEPEND=""
 RDEPEND=""
