@@ -11,7 +11,7 @@ DESCRIPTION="Arduino command line interface (git source)"
 HOMEPAGE="https://arduino.github.io/arduino-cli"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
