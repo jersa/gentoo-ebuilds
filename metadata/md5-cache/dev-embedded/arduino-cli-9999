@@ -1,0 +1,14 @@
+BDEPEND=>=dev-util/task-0.17.0 >=dev-lang/go-1.17.0 >=dev-lang/go-1.18 app-arch/unzip >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install prepare unpack
+DESCRIPTION=Arduino command line interface (git source)
+EAPI=8
+HOMEPAGE=https://arduino.github.io/arduino-cli
+INHERIT=go-module git-r3
+KEYWORDS=~amd64
+LICENSE=GPL-3
+PROPERTIES=live
+RESTRICT=strip
+SLOT=0
+SRC_URI=arduino-cli-deps-9999.tar.xz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	f2c9bcab49079a176b3ae061c94bb344	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=879b7bf192885fc9060b09eb99e6f902

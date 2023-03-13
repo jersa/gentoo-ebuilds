@@ -5,7 +5,7 @@ EAPI=8
 
 inherit meson
 
-DESCRIPTION="A graphical logout/suspend/reboot/shutdown dialog for wayland. It is inspired by oblogout and based on code from swaylock-effects."
+DESCRIPTION="A graphical logout/suspend/reboot/shutdown dialog for wayland"
 HOMEPAGE="https://github.com/loserMcloser/waylogout"
 
 if [[ ${PV} == 9999 ]]; then
@@ -18,7 +18,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="+gdk-pixbuf +man zsh-completions fish-completions bash-completions"
+IUSE="+gdk-pixbuf +man"
 
 BDEPEND="
 	man? ( >=app-text/scdoc-1.9.2 )
@@ -38,9 +38,10 @@ src_configure() {
 	local emesonargs=(
 		$(meson_feature gdk-pixbuf gdk-pixbuf)
 		$(meson_feature man man-pages)
-		$(meson_use zsh-completions zsh-completions)
-		$(meson_use bash-completions bash-completions)
-		$(meson_use fish-completions fish-completions)
 	)
 	meson_src_configure
+}
+
+src_install() {
+	meson_src_install
 }

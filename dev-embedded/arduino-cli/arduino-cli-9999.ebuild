@@ -13,18 +13,11 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-GH_DISTFILES="https://github.com/jersa/gentoo-ebuilds/blob/main/distfiles/"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/arduino/${PN}.git"
-	# SRC_URI="${PN}-deps-${PV}.tar.xz"
-	SRC_URI="${GH_DISTFILES}${PN}-deps-${PV}.1.tar.xz
-			${GH_DISTFILES}${PN}-deps-${PV}.2.tar.xz
-			${GH_DISTFILES}${PN}-deps-${PV}.3.tar.xz
-			${GH_DISTFILES}${PN}-deps-${PV}.4.tar.xz
-			${GH_DISTFILES}${PN}-deps-${PV}.5.tar.xz
-			${GH_DISTFILES}${PN}-deps-${PV}.6.tar.xz"
+	SRC_URI="${PN}-deps-${PV}.tar.xz"
 else
 	SRC_URI="https://github.com/arduino/${PN^}/archive/${PV}.tar.gz -> ${P}.tar.gz
 			${PN}-deps-${PV}.tar.xz"

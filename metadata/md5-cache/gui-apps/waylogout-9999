@@ -1,14 +1,14 @@
-BDEPEND=>=app-text/scdoc-1.9.2 >=x11-libs/gdk-pixbuf-2 >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=man? ( >=app-text/scdoc-1.9.2 ) gdk-pixbuf? ( x11-libs/gdk-pixbuf:2 ) virtual/pkgconfig >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install test unpack
 DEPEND=dev-libs/wayland dev-libs/wayland-protocols x11-libs/libxkbcommon x11-libs/cairo media-fonts/fontawesome
-DESCRIPTION=A graphical logout/suspend/reboot/shutdown dialog for wayland. It is inspired by oblogout and based on code from swaylock-effects.
+DESCRIPTION=A graphical logout/suspend/reboot/shutdown dialog for wayland
 EAPI=8
 HOMEPAGE=https://github.com/loserMcloser/waylogout
 INHERIT=meson git-r3
-IUSE=gdk-pixbuf man zsh-completions fish-completions bash-completions
+IUSE=+gdk-pixbuf +man
 LICENSE=MIT
 PROPERTIES=live
 RDEPEND=dev-libs/wayland dev-libs/wayland-protocols x11-libs/libxkbcommon x11-libs/cairo media-fonts/fontawesome
 SLOT=0
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	6a75203e8a499f0fb42971452ce15388	meson	1994a5aef5d4f5798b92f64d6f9a6003	git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=3ce35181b40a72e4aa5c776b40cac563
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	meson	1994a5aef5d4f5798b92f64d6f9a6003	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=4c40da0ab23cd5a7e62d9691941eb538

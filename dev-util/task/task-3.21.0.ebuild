@@ -14,14 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="strip"
 
-GH_DISTFILES="https://github.com/jersa/gentoo-ebuilds/blob/main/distfiles/"
-
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/go-task/${PN^}.git"
 else
-	SRC_URI="https://github.com/go-task/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${PV}.tar.gz
-			${GH_DISTFILES}${P}-deps.tar.xz"
+	SRC_URI="https://github.com/go-task/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+			https://gitlab.com/jerm-ebuilds/distfiles/-/raw/main/${PN}-deps-${PV}.tar.xz"
 	KEWORDS="~amd64"
 fi
 
