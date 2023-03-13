@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
 <pkgmetadata>
-  <maintainer type="person">
-    <email>stinkyj@gmail.com</email>
-	<description>Primary maintainer</description>
-</maintainer>
-<upstream>
-	<remote-id type="github">loserMcloser/waylogout</remote-id>
-</upstream>
+	<maintainer type="person">
+		<email>jerm.theory@outlook.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">loserMcloser/waylogout</remote-id>
+	</upstream>
+	<longdescription>A graphical logout/suspend/reboot/shutdown dialog for wayland. It is inspired
+		by oblogout and based on code from swaylock-effects.</longdescription>
+	<use><flag name="gdk-pixbuf">Enable additional image format support via the x11-libs/gdk-pixbuf library</flag></use>
 </pkgmetadata>
