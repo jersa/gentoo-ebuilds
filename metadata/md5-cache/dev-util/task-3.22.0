@@ -9,5 +9,5 @@ LICENSE=MIT
 RESTRICT=strip strip
 SLOT=0
 SRC_URI=https://github.com/go-task/task/archive/refs/tags/v3.22.0.tar.gz -> task-3.22.0.tar.gz https://gitlab.com/jerm-ebuilds/distfiles/-/raw/main/task-deps-3.22.0.tar.xz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	f2c9bcab49079a176b3ae061c94bb344	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
+_eclasses_=bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	go-module	472b9e09c35add3a3da376330c033dec	multilib	5ca4e49abed8e3a2f7b56920eadee157	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b
 _md5_=6adf3d5bc5119c1c757ad403ea694d02

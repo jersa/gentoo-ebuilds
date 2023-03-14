@@ -5,6 +5,10 @@
 		<email>jerm.theory@gmail.com</email>
 		<description>Primary maintainer</description>
 	</maintainer>
+	<maintainer type="project">
+		<email>proxy-maint@gentoo.org</email>
+		<description>Proxy Maintainers</description>
+	</maintainer>
 	<upstream>
 		<remote-id type="github">arduino/arduino-cli</remote-id>
 	</upstream>

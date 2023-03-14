@@ -5,6 +5,10 @@
 		<email>jerm.theory@outlook.com</email>
 		<name>J Anthony</name>
 	</maintainer>
+	<maintainer type="project">
+		<email>proxy-maint@gentoo.org</email>
+		<description>Proxy Maintainers</description>
+	</maintainer>
 	<upstream>
 		<remote-id type="github">go-task/task</remote-id>
 	</upstream>
