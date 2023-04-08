@@ -1,0 +1,14 @@
+BDEPEND=dev-lang/perl dev-util/meson sys-apps/texinfo virtual/pkgconfig sys-libs/ncurses x11-libs/pixman >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install test unpack
+DEPEND=dev-lang/perl dev-util/meson sys-apps/texinfo virtual/pkgconfig sys-libs/ncurses x11-libs/pixman
+DESCRIPTION=Audio-enabled fork of QEMU for PowerPC guests
+EAPI=8
+HOMEPAGE=https://github.com/mcayland/qemu/tree/screamer
+INHERIT=git-r3
+KEYWORDS=~amd64
+LICENSE=GPL-2 LGPL-2 BSD-2
+PROPERTIES=live
+RDEPEND=dev-lang/perl dev-util/meson sys-apps/texinfo virtual/pkgconfig sys-libs/ncurses x11-libs/pixman
+SLOT=0
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676
+_md5_=c0aa302272b2726e258b37497e4692c8

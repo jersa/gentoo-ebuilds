@@ -13,15 +13,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/arduino/${PN}.git"
-	SRC_URI="${PN}-deps-${PV}.tar.xz"
-else
-	SRC_URI="https://github.com/arduino/${PN^}/archive/${PV}.tar.gz -> ${P}.tar.gz
-			https://gitlab.com/jerm-ebuilds/distfiles/-/raw/main/${PN}-deps-${PV}.tar.xz"
-
-fi
+SRC_URI="https://github.com/arduino/${PN^}/archive/${PV}.tar.gz -> ${P}.tar.gz
+		https://gitlab.com/jerm-ebuilds/distfiles/-/raw/main/${PN}-deps-${PV}.tar.xz"
 
 # eventually add these
 #IUSE="tests grpc"
