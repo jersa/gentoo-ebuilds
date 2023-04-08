@@ -33,7 +33,11 @@ src_unpack() {
 src_compile() {
 	#GOBIN=$(pwd)/temp/bin go install github.com/go-task/task/v3/cmd/task@
 	#ego env GOBIN "${WORKDIR}/bin"
-	ego build -o task cmd/task/task.go || die "task build failed"
+	# GOOS=$(go env GOOS) GOARCH=$(go env GOARCH) ego build -o cmd/task/task -ldflags="-X task.version=${PV}" || die "task build failed" cmd/task/task.go
+	ego build -o task \
+		-ldflags="-X main.version=${PV} -X github.com/go-task/task/v3/internal/version.version=${PV}" \
+		cmd/task/task.go || die "task build failed"
+
 }
 
 src_install() {
