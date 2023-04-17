@@ -5,11 +5,9 @@ EAPI=8
 
 inherit go-module bash-completion-r1 || exit
 
-go-module_set_globals
-
 DESCRIPTION="Task runner & build tool that aims to be simpler and easier to use than GNU Make"
 HOMEPAGE="https://github.com/go-task/task"
-LICENSE="MIT"
+LICENSE="MIT BSD Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="strip"
@@ -31,9 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-	#GOBIN=$(pwd)/temp/bin go install github.com/go-task/task/v3/cmd/task@
-	#ego env GOBIN "${WORKDIR}/bin"
-	# GOOS=$(go env GOOS) GOARCH=$(go env GOARCH) ego build -o cmd/task/task -ldflags="-X task.version=${PV}" || die "task build failed" cmd/task/task.go
 	ego build -o task \
 		-ldflags="-X main.version=${PV} -X github.com/go-task/task/v3/internal/version.version=${PV}" \
 		cmd/task/task.go || die "task build failed"

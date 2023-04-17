@@ -11,5 +11,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="github">go-task/task</remote-id>
+		<remote-id type="gitlab">jerm-ebuilds/distfiles</remote-id>
 	</upstream>
 </pkgmetadata>

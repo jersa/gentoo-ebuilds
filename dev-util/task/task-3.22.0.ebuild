@@ -9,7 +9,7 @@ go-module_set_globals
 
 DESCRIPTION="Task runner & build tool that aims to be simpler and easier to use than GNU Make"
 HOMEPAGE="https://github.com/go-task/task"
-LICENSE="MIT"
+LICENSE="MIT BSD Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="strip"
