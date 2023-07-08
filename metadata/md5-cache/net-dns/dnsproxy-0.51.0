@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.19.0 >=dev-lang/go-1.18 app-arch/unzip
+DEFINED_PHASES=install unpack
+DESCRIPTION=A simple DNS proxy server that supports all existing DNS protocols
+EAPI=8
+HOMEPAGE=https://github.com/AdguardTeam/dnsproxy
+INHERIT=go-module
+KEYWORDS=~amd64 ~arm64
+LICENSE=Apache-2.0 Unlicense MIT BSD
+RESTRICT=strip strip
+SLOT=0
+SRC_URI=https://github.com/AdguardTeam/dnsproxy/archive/refs/tags/v0.51.0.tar.gz -> dnsproxy-0.51.0.tar.gz https://gitlab.com/jerm-ebuilds/distfiles/-/raw/main/dnsproxy-deps-0.51.0.tar.xz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
+_md5_=28929874356155406975261a2090c7f7
