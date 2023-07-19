@@ -6,5 +6,9 @@
 		<name>J Anthony</name>
 		<description>Proxy Maintainers</description>
 	</maintainer>
-	<longdescription>A simple DNS proxy server that supports all existing DNS protocols including DNS-over-TLS, DNS-over-HTTPS, DNSCrypt, and DNS-over-QUIC</longdescription>
+	<longdescription lang="en">A simple DNS proxy server that supports all existing DNS protocols
+		including DNS-over-TLS, DNS-over-HTTPS, DNSCrypt, and DNS-over-QUIC</longdescription>
+	<upstream>
+		<remote-id type="github">AdguardTeam/dnsproxy</remote-id>
+	</upstream>
 </pkgmetadata>

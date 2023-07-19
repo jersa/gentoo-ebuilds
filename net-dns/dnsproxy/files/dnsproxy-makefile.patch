@@ -1,0 +1,24 @@
+diff --git a/Makefile b/Makefile
+index dbe893a..98346f5 100644
+--- a/Makefile
++++ b/Makefile
+@@ -15,8 +15,8 @@ GOPROXY = https://goproxy.cn|https://proxy.golang.org|direct
+ DIST_DIR=build
+ OUT = dnsproxy
+ RACE = 0
+-VERBOSE = 0
+-VERSION = dev
++VERBOSE = 2
++VERSION = 0.52.0 
+ 
+ ENV = env\
+ 	DIST_DIR='$(DIST_DIR)'\
+@@ -34,7 +34,7 @@ ENV = env\
+ build:   ; $(ENV) "$(SHELL)" ./scripts/make/build.sh
+ 
+ clean:   ; $(ENV) $(GO.MACRO) clean && rm -f -r '$(DIST_DIR)'
+-test:    ; $(ENV) RACE='1' "$(SHELL)" ./scripts/make/test.sh
++test:    ; $(ENV) RACE='0' "$(SHELL)" ./scripts/make/test.sh
+ 
+ release: clean
+ 	$(ENV) "$(SHELL)" ./scripts/make/release.sh
