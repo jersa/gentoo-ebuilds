@@ -1,0 +1,58 @@
+diff --git a/meson.build b/meson.build
+index f3802553..d8fbb805 100644
+--- a/meson.build
++++ b/meson.build
+@@ -39,8 +39,19 @@ add_project_arguments(
+   ],
+   language: 'cpp')
+ 
+-wlroots = subproject('wlroots', default_options: ['examples=false'])
+-have_xwlr = wlroots.get_variable('features').get('xwayland')
++wlroots = dependency('wlroots', required: get_option('use_system_wlroots'))
++use_system_wlroots = not get_option('use_system_wlroots').disabled() and wlroots.found()
++if not use_system_wlroots
++  wlroots = subproject('wlroots', default_options : ['examples=false']).get_variable('wlroots')
++endif
++
++have_xwlr = false
++if use_system_wlroots
++  have_xwlr = cpp_compiler.get_define('WLR_HAS_XWAYLAND', prefix: '#include <wlr/config.h>', dependencies: wlroots) == '1'
++else
++  have_xwlr = subproject('wlroots').get_variable('features').get('xwayland')
++endif
++
+ xcb_dep = dependency('xcb', required: get_option('xwayland'))
+ 
+ cmake = import('cmake')
+@@ -53,7 +64,7 @@ endif
+ have_xwayland = xcb_dep.found() and have_xwlr
+ 
+ if not have_xwayland
+-add_project_arguments('-DNO_XWAYLAND', language: 'cpp')
++  add_project_arguments('-DNO_XWAYLAND', language: 'cpp')
+ endif
+ 
+ backtrace_dep = cpp_compiler.find_library('execinfo', required: false)
+diff --git a/meson_options.txt b/meson_options.txt
+index e8e2b062..79e316e3 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -1,2 +1,3 @@
++option('use_system_wlroots', type: 'feature', value: 'auto', description: 'Use the system-wide installation of wlroots')
+ option('xwayland', type: 'feature', value: 'auto', description: 'Enable support for X11 applications')
+ option('systemd', type: 'feature', value: 'auto', description: 'Enable systemd integration')
+diff --git a/src/meson.build b/src/meson.build
+index 7b658d31..dd26d50d 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -5,9 +5,9 @@ executable('Hyprland', src,
+   cpp_args: ['-DWLR_USE_UNSTABLE'],
+   dependencies: [
+     server_protos,
++    wlroots,
+     dependency('wayland-server'),
+     dependency('wayland-client'),
+-    wlroots.get_variable('wlroots'),
+     dependency('cairo'),
+     dependency('libdrm'),
+     dependency('egl'),

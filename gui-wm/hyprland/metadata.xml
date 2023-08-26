@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jerm.theory@outlook.com</email>
+		<name>Jeremy Anthony</name>
+	</maintainer>
+	<maintainer type="project">
+		<email>proxy-maint@gentoo.org</email>
+		<description>Proxy Maintainers</description>
+	</maintainer>
+	<use>
+		<flag name="X">build for xorg</flag>
+		<flag name="legacy-renderer">FIXME</flag>
+		<flag name="systemd">build with systemd support</flag>
+		<flag name="video_cards_nvidia">build with support for nvidia GPUs</flag>
+	</use>
+</pkgmetadata>
